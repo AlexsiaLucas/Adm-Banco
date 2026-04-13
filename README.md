@@ -2,8 +2,8 @@
 
 ## 📌 Integrantes
 
-* Nome 1
-* Nome 2
+* Aléxsia Lucas
+* Heitor Hugo
 
 ---
 
