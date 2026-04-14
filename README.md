@@ -52,6 +52,7 @@ Comando utilizado:
 ```sql
 sudo -u postgres psql
 \dt
+\c dvdrental
 ```
 
 ---
