@@ -32,15 +32,25 @@ Este trabalho consiste na importação do banco de dados de exemplo **dvdrental*
 
 Banco criado via terminal utilizando PostgreSQL.
 
+
+```bash
+sudo -u postgres createdb dvdrental
+```
+
 ### 2. Importação do banco dvdrental
 
 Utilizado arquivo `.tar` com pg_restore.
+
+```bash
+sudo -u postgres pg_restore -d dvdrental /home/ubuntu/dvdrental.tar
+```
 
 ### 3. Verificação das tabelas
 
 Comando utilizado:
 
 ```sql
+sudo -u postgres psql
 \dt
 ```
 
