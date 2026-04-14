@@ -135,6 +135,20 @@ LEFT JOIN inventory i ON r.inventory_id = i.inventory_id
 LEFT JOIN film f ON i.film_id = f.film_id;
 ```
 
+```sql
+CREATE OR REPLACE VIEW vw_clientes_filmes_com_qtd AS
+SELECT 
+    c.customer_id,
+    c.first_name || ' ' || c.last_name AS nome,
+    f.title,
+    COALESCE(COUNT(r.rental_id) OVER (PARTITION BY c.customer_id), 0) AS quantidade_filmes
+FROM customer c
+LEFT JOIN rental r ON c.customer_id = r.customer_id
+LEFT JOIN inventory i ON r.inventory_id = i.inventory_id
+LEFT JOIN film f ON i.film_id = f.film_id
+WHERE r.rental_id IS NULL;
+```
+
 ---
 ## Testar
 
