@@ -136,6 +136,15 @@ LEFT JOIN film f ON i.film_id = f.film_id;
 ```
 
 ---
+## Testar
+
+```sql
+SELECT * FROM vw_atores LIMIT 5;
+SELECT * FROM vw_filme_atores LIMIT 5;
+SELECT * FROM vw_pessoas LIMIT 5;
+SELECT * FROM vw_qtd_filmes_cliente LIMIT 10;
+SELECT * FROM vw_filmes_cliente LIMIT 10;
+```
 
 ## 📸 Prints
 
